@@ -10,6 +10,7 @@ public class BitsArray implements FlagsSet {
             throw new IllegalArgumentException("Размер коллекции 1024");
     }
 
+
     @Override
     public boolean get(int index) {
         checkIndex(index);
@@ -17,6 +18,8 @@ public class BitsArray implements FlagsSet {
         int bitind = index % 32;
         return ((bits[bitsind] >> bitind) & 1) == 1;
     }
+
+
 
 
     @Override
